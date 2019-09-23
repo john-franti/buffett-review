@@ -1,19 +1,16 @@
 import React, { Component } from "react";
 
 class Buffet extends Component {
-  handleUserClickOnFood = () => {
-    this.props.onUserClickOnFood(this.props.food)
-  };
 
   render() {
-    const { name, image } = this.props.food;
+
     return (
       <div className="col col-md-2">
         <div className="card">
           {/* IMAGE BELOW */}
-          <img onClick={this.handleUserClickOnFood} className="card-img-top" src={image} />
+          <img className="card-img-top" />
           <div className="card-body">
-            <p>{name}</p>
+            <p>NAME OF FOOD</p>
           </div>
         </div>
       </div>

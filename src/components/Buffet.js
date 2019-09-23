@@ -5,14 +5,12 @@ class Buffet extends Component {
   //this.props.addFoodToPlate = function prop from App
 
   displayBuffet = () => {
-    return this.props.buffetFood.map((food, index) => {
-      return <Food onUserClickOnFood={this.props.addFoodToPlate} key={index} food={food} />;
-    });
+    //DISPLAY FOOD HERE
   };
 
   render() {
     return (
-      <div className="container">
+      <div className="container jumbotron">
         <h4>BUFFET CONTENTS</h4>
         <div className="row">{this.displayBuffet()}</div>
       </div>
