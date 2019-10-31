@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import Buffet from "./components/Buffet";
+import Plate from "./components/Plate";
+import FOOD_ITEMS from "./FOOD.js";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    buffetFood: FOOD_ITEMS.food, //this resolves to an array of objects with "name" and "image" props
+    plateFood: []
+  };
+
+  render() {
+    return (
+      <div className="App">
+        <h3>Welcome to the All-You-Can-Eat Buffet</h3>
+        <Buffet />
+        <Plate />
+      </div>
+    );
+  }
 }
 
 export default App;
